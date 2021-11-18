@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionReusableView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="U6b-Vx-4bR" customClass="PlaylistCollectionReusableView" customModule="Sputify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="572" height="408"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Nah-Y2-prG">
+                    <rect key="frame" x="143" y="30" width="286" height="285.5"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KmW-LW-cGo" userLabel="Label description">
+                    <rect key="frame" x="16" y="330.5" width="480" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aaq-GA-8sH">
+                    <rect key="frame" x="16" y="356.5" width="34.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WdF-nz-RCG">
+                    <rect key="frame" x="511" y="347" width="61" height="61"/>
+                    <color key="tintColor" red="0.3411764706" green="0.71372549019999998" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <backgroundConfiguration key="background" image="play.circle.fill" catalog="system"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapPlayAll:" destination="U6b-Vx-4bR" eventType="touchUpInside" id="ckt-UU-cNM"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="VXr-Tz-HHm"/>
+            <constraints>
+                <constraint firstItem="WdF-nz-RCG" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.15" id="1DP-uP-Afa"/>
+                <constraint firstItem="WdF-nz-RCG" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.15" id="6Dy-kk-dhX"/>
+                <constraint firstItem="Nah-Y2-prG" firstAttribute="centerX" secondItem="U6b-Vx-4bR" secondAttribute="centerX" id="EHZ-N8-ef0"/>
+                <constraint firstItem="WdF-nz-RCG" firstAttribute="leading" secondItem="KmW-LW-cGo" secondAttribute="trailing" constant="15" id="Tqk-8U-Go9"/>
+                <constraint firstItem="Nah-Y2-prG" firstAttribute="height" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.7" id="dZ8-i4-ABO"/>
+                <constraint firstItem="Aaq-GA-8sH" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="f4b-mH-cZV"/>
+                <constraint firstItem="Nah-Y2-prG" firstAttribute="width" secondItem="U6b-Vx-4bR" secondAttribute="height" multiplier="0.7" id="gW5-dK-jps"/>
+                <constraint firstItem="Nah-Y2-prG" firstAttribute="top" secondItem="U6b-Vx-4bR" secondAttribute="top" constant="30" id="n1w-r1-b6K"/>
+                <constraint firstItem="Aaq-GA-8sH" firstAttribute="top" secondItem="KmW-LW-cGo" secondAttribute="bottom" constant="10" id="os6-N0-gA7"/>
+                <constraint firstItem="WdF-nz-RCG" firstAttribute="trailing" secondItem="VXr-Tz-HHm" secondAttribute="trailing" id="vko-SU-Rtr"/>
+                <constraint firstItem="KmW-LW-cGo" firstAttribute="top" secondItem="Nah-Y2-prG" secondAttribute="bottom" constant="15" id="yQS-Ie-Ge0"/>
+                <constraint firstAttribute="bottom" secondItem="WdF-nz-RCG" secondAttribute="bottom" id="yrx-bN-GTU"/>
+                <constraint firstItem="KmW-LW-cGo" firstAttribute="leading" secondItem="VXr-Tz-HHm" secondAttribute="leading" constant="16" id="zfG-BY-pBR"/>
+            </constraints>
+            <connections>
+                <outlet property="labelDescriptionLabel" destination="KmW-LW-cGo" id="fST-ag-4uk"/>
+                <outlet property="ownerNameLabel" destination="Aaq-GA-8sH" id="ij6-bR-Mwu"/>
+                <outlet property="playlistImageView" destination="Nah-Y2-prG" id="Ajt-nz-ztl"/>
+            </connections>
+            <point key="canvasLocation" x="-604.34782608695662" y="273.21428571428572"/>
+        </collectionReusableView>
+    </objects>
+    <resources>
+        <image name="play.circle.fill" catalog="system" width="128" height="121"/>
+    </resources>
+</document>

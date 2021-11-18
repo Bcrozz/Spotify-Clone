@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryViewController" customModule="Sputify" customModuleProvider="target">
+            <connections>
+                <outlet property="contentScrollView" destination="2gc-8H-TbS" id="aEV-c4-ky5"/>
+                <outlet property="indicatorTabView" destination="vYG-cy-HTc" id="JTi-NO-2bx"/>
+                <outlet property="scrollView" destination="r4U-mx-0wa" id="OpT-SZ-eSf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4U-mx-0wa">
+                    <rect key="frame" x="0.0" y="86.333333333333314" width="390" height="723.66666666666674"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gc-8H-TbS" userLabel="ContentView">
+                            <rect key="frame" x="0.0" y="20" width="780" height="723.66666666666663"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="2gc-8H-TbS" firstAttribute="bottom" secondItem="8aP-vP-3ce" secondAttribute="bottom" id="371-qN-K0d"/>
+                        <constraint firstItem="2gc-8H-TbS" firstAttribute="leading" secondItem="8aP-vP-3ce" secondAttribute="leading" id="GM2-nj-E4A"/>
+                        <constraint firstItem="2gc-8H-TbS" firstAttribute="trailing" secondItem="8aP-vP-3ce" secondAttribute="trailing" id="iH1-Oo-baR"/>
+                        <constraint firstItem="2gc-8H-TbS" firstAttribute="height" secondItem="Etq-MJ-alg" secondAttribute="height" id="ltm-lH-FU1"/>
+                        <constraint firstItem="2gc-8H-TbS" firstAttribute="top" secondItem="8aP-vP-3ce" secondAttribute="top" constant="20" id="ust-V2-Ucg"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="8aP-vP-3ce"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="Etq-MJ-alg"/>
+                </scrollView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYG-cy-HTc" userLabel="indicatorView" customClass="LibraryToggleView" customModule="Sputify" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="44" width="195" height="42.333333333333343"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="blackSpotify"/>
+            <constraints>
+                <constraint firstItem="r4U-mx-0wa" firstAttribute="top" secondItem="vYG-cy-HTc" secondAttribute="bottom" id="LsM-xK-sLY"/>
+                <constraint firstItem="vYG-cy-HTc" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="TDG-uO-8Ee"/>
+                <constraint firstAttribute="trailing" secondItem="r4U-mx-0wa" secondAttribute="trailing" id="cLZ-WF-BQ0"/>
+                <constraint firstItem="2gc-8H-TbS" firstAttribute="width" secondItem="r4U-mx-0wa" secondAttribute="width" multiplier="2" id="eoO-0A-xE9"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="r4U-mx-0wa" secondAttribute="bottom" id="mgH-HD-13t"/>
+                <constraint firstItem="vYG-cy-HTc" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="twA-6t-Kgt"/>
+                <constraint firstItem="vYG-cy-HTc" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.05" id="xEl-zo-aPY"/>
+                <constraint firstItem="r4U-mx-0wa" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xWs-uk-SPY"/>
+                <constraint firstItem="vYG-cy-HTc" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zvO-zk-QrA"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="127.90178571428571"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="blackSpotify">
+            <color red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

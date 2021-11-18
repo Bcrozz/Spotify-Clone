@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AlbumCollectionViewCell" customModule="Sputify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="120"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lZw-MX-I4J">
+                        <rect key="frame" x="1" y="42.5" width="340.5" height="35.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0XX-ai-Oec">
+                                <rect key="frame" x="0.0" y="0.0" width="340.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RLW-pC-TDi">
+                                <rect key="frame" x="0.0" y="22" width="340.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gc9-zv-cek">
+                        <rect key="frame" x="356.5" y="54" width="18.5" height="12"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <backgroundConfiguration key="background" image="ellipsis" catalog="system"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapExtend:" destination="gTV-IL-0wX" eventType="touchUpInside" id="mdQ-Yh-tmW"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="gc9-zv-cek" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="6OM-cx-BYz"/>
+                <constraint firstItem="gc9-zv-cek" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.1" id="Qcv-yj-j9O"/>
+                <constraint firstItem="lZw-MX-I4J" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="1" id="bvE-wg-V4i"/>
+                <constraint firstItem="gc9-zv-cek" firstAttribute="leading" secondItem="lZw-MX-I4J" secondAttribute="trailing" constant="15" id="dCX-re-lee"/>
+                <constraint firstAttribute="trailing" secondItem="gc9-zv-cek" secondAttribute="trailing" id="hOu-R2-BMl"/>
+                <constraint firstItem="gc9-zv-cek" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.05" id="nqC-qg-anS"/>
+                <constraint firstItem="lZw-MX-I4J" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="oiv-0T-ZDx"/>
+            </constraints>
+            <size key="customSize" width="375" height="120"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="RLW-pC-TDi" id="hci-9B-T0a"/>
+                <outlet property="nameLabel" destination="0XX-ai-Oec" id="hwh-QP-3ht"/>
+            </connections>
+            <point key="canvasLocation" x="-103.62318840579711" y="121.20535714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+    </resources>
+</document>

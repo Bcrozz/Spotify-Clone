@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ArtistAlbumCollectionViewCell" customModule="Sputify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="437" height="152"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="437" height="152"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nqv-9C-Epb">
+                        <rect key="frame" x="0.0" y="0.0" width="152" height="152"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="PjQ-LV-rvJ">
+                        <rect key="frame" x="168" y="57" width="64.5" height="38.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fly-Su-fjh">
+                                <rect key="frame" x="0.0" y="0.0" width="64.5" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2019•Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RFP-dt-m8u">
+                                <rect key="frame" x="0.0" y="25" width="64.5" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="nqv-9C-Epb" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="Fgn-Lk-iiD"/>
+                <constraint firstItem="PjQ-LV-rvJ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="Lkk-ad-0g7"/>
+                <constraint firstItem="nqv-9C-Epb" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Pc3-ew-wMq"/>
+                <constraint firstItem="PjQ-LV-rvJ" firstAttribute="leading" secondItem="nqv-9C-Epb" secondAttribute="trailing" constant="16" id="UoB-d8-Pz4"/>
+                <constraint firstAttribute="bottom" secondItem="nqv-9C-Epb" secondAttribute="bottom" id="sp5-z0-42B"/>
+                <constraint firstItem="nqv-9C-Epb" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" id="zuv-gU-EVu"/>
+            </constraints>
+            <size key="customSize" width="437" height="152"/>
+            <connections>
+                <outlet property="albumImageView" destination="nqv-9C-Epb" id="Dvs-I8-oH5"/>
+                <outlet property="albumNameLabel" destination="fly-Su-fjh" id="HR7-tK-3r2"/>
+                <outlet property="albumTypeAndDateLabel" destination="RFP-dt-m8u" id="wZe-aT-Fdl"/>
+            </connections>
+            <point key="canvasLocation" x="173.18840579710147" y="121.20535714285714"/>
+        </collectionViewCell>
+    </objects>
+</document>

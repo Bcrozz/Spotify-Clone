@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LibraryToggleView" customModule="Sputify" customModuleProvider="target">
+            <connections>
+                <outlet property="leftIndicatorConstraint" destination="w0y-1N-L0A" id="PHz-WG-cIq"/>
+                <outlet property="rightIndicatorConstraint" destination="tpM-hb-9vy" id="hqW-gs-uZq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="343" height="64"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="W0J-zj-ZCs">
+                    <rect key="frame" x="0.0" y="0.0" width="171.5" height="51"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Playlists">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapPlaylistButton:" destination="-1" eventType="touchUpInside" id="syg-38-1o1"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMt-j1-Sdb">
+                    <rect key="frame" x="171.5" y="0.0" width="171.5" height="51"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Albums">
+                        <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="15"/>
+                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </buttonConfiguration>
+                    <connections>
+                        <action selector="didTapAlbumButton:" destination="-1" eventType="touchUpInside" id="pzn-QZ-40h"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rsD-mc-XPF" userLabel="indicator">
+                    <rect key="frame" x="0.0" y="51" width="171.5" height="13"/>
+                    <color key="backgroundColor" red="0.3411764706" green="0.71372549019999998" blue="0.37647058820000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="W0J-zj-ZCs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="BoU-aW-XgL"/>
+                <constraint firstItem="W0J-zj-ZCs" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="S5D-HK-DQc"/>
+                <constraint firstItem="yMt-j1-Sdb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="SRi-Jn-xxm"/>
+                <constraint firstItem="yMt-j1-Sdb" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="TyD-cs-1fH"/>
+                <constraint firstItem="rsD-mc-XPF" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="YSe-3Z-9bg"/>
+                <constraint firstItem="rsD-mc-XPF" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="ZRB-1C-Tbp"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="yMt-j1-Sdb" secondAttribute="trailing" id="ZUb-2L-WyC"/>
+                <constraint firstItem="W0J-zj-ZCs" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mLV-rs-xwp"/>
+                <constraint firstItem="rsD-mc-XPF" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="qZ9-ts-Qns"/>
+                <constraint firstItem="yMt-j1-Sdb" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="qny-kj-Hpy"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rsD-mc-XPF" secondAttribute="trailing" id="tpM-hb-9vy"/>
+                <constraint firstItem="W0J-zj-ZCs" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.8" id="vnF-a4-XBR"/>
+                <constraint firstItem="rsD-mc-XPF" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="w0y-1N-L0A"/>
+            </constraints>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="tpM-hb-9vy"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="181.8840579710145" y="-164.73214285714286"/>
+        </view>
+    </objects>
+</document>

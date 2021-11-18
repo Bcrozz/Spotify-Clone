@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="PlaylsitCollectionViewCell" customModule="Sputify" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="405" height="104"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="405" height="104"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="psv-7H-wOB">
+                        <rect key="frame" x="0.0" y="0.0" width="104" height="104"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="bEV-n5-mAG">
+                        <rect key="frame" x="114" y="34.5" width="256" height="35.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AS6-PY-TUt">
+                                <rect key="frame" x="0.0" y="0.0" width="256" height="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="artist name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5P-T6-uep">
+                                <rect key="frame" x="0.0" y="22" width="256" height="13.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tG4-5i-rhe">
+                        <rect key="frame" x="385" y="47" width="20" height="10"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain">
+                            <backgroundConfiguration key="background" image="ellipsis" catalog="system"/>
+                        </buttonConfiguration>
+                        <connections>
+                            <action selector="didTapExtendButton:" destination="gTV-IL-0wX" eventType="touchUpInside" id="z1X-5M-LiY"/>
+                        </connections>
+                    </button>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="tG4-5i-rhe" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.1" id="00X-G3-OBG"/>
+                <constraint firstItem="tG4-5i-rhe" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="FEw-fQ-5h8"/>
+                <constraint firstItem="tG4-5i-rhe" firstAttribute="leading" secondItem="bEV-n5-mAG" secondAttribute="trailing" constant="15" id="Gdm-t9-azy"/>
+                <constraint firstItem="bEV-n5-mAG" firstAttribute="leading" secondItem="psv-7H-wOB" secondAttribute="trailing" constant="10" id="Kbs-QG-8zy"/>
+                <constraint firstAttribute="bottom" secondItem="psv-7H-wOB" secondAttribute="bottom" id="MHX-MN-FSR"/>
+                <constraint firstItem="bEV-n5-mAG" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="aYp-ne-rui"/>
+                <constraint firstAttribute="trailing" secondItem="tG4-5i-rhe" secondAttribute="trailing" id="cxF-Xc-4RO"/>
+                <constraint firstItem="tG4-5i-rhe" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="width" multiplier="0.05" id="g7T-Et-pcL"/>
+                <constraint firstItem="psv-7H-wOB" firstAttribute="width" secondItem="gTV-IL-0wX" secondAttribute="height" id="gPU-gx-4KN"/>
+                <constraint firstItem="psv-7H-wOB" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="uSl-bl-MEc"/>
+                <constraint firstItem="psv-7H-wOB" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="xGg-8f-hXL"/>
+            </constraints>
+            <size key="customSize" width="405" height="104"/>
+            <connections>
+                <outlet property="artistNameLabel" destination="i5P-T6-uep" id="MTk-8l-L4P"/>
+                <outlet property="extendButton" destination="tG4-5i-rhe" id="x4f-1e-5ss"/>
+                <outlet property="trackImageView" destination="psv-7H-wOB" id="g5c-6W-wn1"/>
+                <outlet property="trackNameLabel" destination="AS6-PY-TUt" id="CUf-wU-Sm1"/>
+            </connections>
+            <point key="canvasLocation" x="190.57971014492756" y="91.741071428571431"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ellipsis" catalog="system" width="128" height="37"/>
+    </resources>
+</document>

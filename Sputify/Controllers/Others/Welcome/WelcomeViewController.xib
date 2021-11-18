@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WelcomeViewController" customModule="Sputify" customModuleProvider="target">
+            <connections>
+                <outlet property="signInButton" destination="mJ8-Ju-Bnn" id="1bP-z9-tAO"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="Sxe-Jt-1U3">
+                    <rect key="frame" x="91.5" y="269" width="231" height="358"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon" translatesAutoresizingMaskIntoConstraints="NO" id="1n6-ue-jHj">
+                            <rect key="frame" x="0.0" y="0.0" width="231" height="276.5"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="1n6-ue-jHj" secondAttribute="height" multiplier="0.5:0.6" id="AeA-9t-Txp"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" verticalCompressionResistancePriority="751" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJ8-Ju-Bnn">
+                            <rect key="frame" x="9.5" y="318.5" width="212.5" height="39.5"/>
+                            <buttonConfiguration key="configuration" style="filled" title="Sign In With Spotify" subtitle="" cornerStyle="dynamic" titleAlignment="center">
+                                <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="21"/>
+                                <color key="baseForegroundColor" systemColor="labelColor"/>
+                                <color key="baseBackgroundColor" red="0.36470588240000001" green="0.70980392160000005" blue="0.45098039220000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </buttonConfiguration>
+                            <connections>
+                                <action selector="didTapSignIn:" destination="-1" eventType="touchUpInside" id="e6O-r8-owd"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="blackSpotify"/>
+            <constraints>
+                <constraint firstItem="Sxe-Jt-1U3" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="4Zh-eQ-A50"/>
+                <constraint firstItem="Sxe-Jt-1U3" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="H1f-KR-rJV"/>
+                <constraint firstItem="Sxe-Jt-1U3" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.4" id="VVN-Wc-kMG"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon" width="1024" height="1024"/>
+        <namedColor name="blackSpotify">
+            <color red="0.070588235289999995" green="0.070588235289999995" blue="0.070588235289999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_Sputify {
+  umbrella header "Pods-Sputify-umbrella.h"
+
+  export *
+  module * { export * }
+}
