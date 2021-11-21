@@ -23,9 +23,9 @@ enum BrowseSectionType {
         case .recommendedTrack:
             return "Recommendation tracks"
         case .userTopTracks:
-            return "Your top artists"
-        case .userTopArtists:
             return "Your top tracks"
+        case .userTopArtists:
+            return "Your top artists"
         }
     }
 }

@@ -17,7 +17,7 @@ class AuthViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.title = "log in with Spotify"
+        navigationItem.title = "Log in with Spotify"
         webView.navigationDelegate = self
         loadSignInWebView()
     }

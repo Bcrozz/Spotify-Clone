@@ -199,14 +199,30 @@ extension SearchResultViewController: UICollectionViewDelegate, UICollectionView
         let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: HeaderBrowseCollectionView.identifier, for: indexPath) as! HeaderBrowseCollectionView
         
         switch sections[indexPath.section]{
-        case .tracks(let title,_):
-            header.headerLabel.text = title
-        case .artists(let title,_):
-            header.headerLabel.text = title
-        case .albums(let title,_):
-            header.headerLabel.text = title
-        case .playlists(let title,_):
-            header.headerLabel.text = title
+        case .tracks(let title,let model):
+            if model.isEmpty {
+                header.headerLabel.text = "No search result"
+            }else {
+                header.headerLabel.text = title
+            }
+        case .artists(let title,let model):
+            if model.isEmpty {
+                header.headerLabel.text = ""
+            }else {
+                header.headerLabel.text = title
+            }
+        case .albums(let title,let model):
+            if model.isEmpty {
+                header.headerLabel.text = ""
+            }else {
+                header.headerLabel.text = title
+            }
+        case .playlists(let title,let model):
+            if model.isEmpty {
+                header.headerLabel.text = ""
+            }else {
+                header.headerLabel.text = title
+            }
         }
         
         return header
