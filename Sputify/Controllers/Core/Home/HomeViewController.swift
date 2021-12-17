@@ -29,7 +29,7 @@ enum BrowseSectionType {
         }
     }
 }
-
+/// Homeview in the mainTabbar
 class HomeViewController: UIViewController {
     
     private var newAlbumReleases: [Album] = []
@@ -244,7 +244,7 @@ class HomeViewController: UIViewController {
         })))
         sections.append(.userTopArtists(viewModels: topArtists.compactMap({
             UserTopArtistsCellViewModel(name: $0.name,
-                                        artworkURL: URL(string: $0.images?[1].url ?? ""))
+                                        artworkURL: URL(string: $0.images?.first?.url ?? ""))
         })))
         sections.append(.userTopTracks(viewModels: topTracks.compactMap({
             UserTopTracksCellViewModel(name: $0.name,
@@ -378,6 +378,8 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             print("")
         }
     }
+    
+    
     
     
     private func configCollectionView(){

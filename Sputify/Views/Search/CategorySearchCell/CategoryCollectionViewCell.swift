@@ -24,9 +24,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         .systemGray,
         .systemOrange,
         .systemPurple,
-        .systemCyan,
-        .systemTeal,
-        .systemCyan
+        .systemTeal
     ]
     
     override func awakeFromNib() {
